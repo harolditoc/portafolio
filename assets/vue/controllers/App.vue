@@ -1,8 +1,6 @@
 <template>
     <Header></Header>
-    <transition name="slide-fade" mode="out-in">
         <router-view></router-view>
-    </transition>
 </template>
 
 <script setup>

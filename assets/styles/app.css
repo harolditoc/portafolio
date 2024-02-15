@@ -36,7 +36,11 @@ body {
   .bg-sec3 {
 
   }
+  @media (max-width: 640px) { .grid-cols-2 { grid-template-columns: 1fr; }
 
+  .flex-1 { flex: 1 0 100%; }
+  
+  .h-64 { height: 30vw; max-height: 200px; } }
   /* Header Vue CSS */
 .router-link-active {
     --tw-text-opacity: 1;
