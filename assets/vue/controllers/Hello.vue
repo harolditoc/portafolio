@@ -1,9 +1,7 @@
 <template>
-    <div>Hello {{ name }}!</div>
+    <Header />
 </template>
 
 <script setup>
-    defineProps({
-        name: String
-    });
+    import Header from './Header.vue';
 </script>

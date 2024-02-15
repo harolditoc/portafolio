@@ -10,4 +10,12 @@ import './bootstrap.js';
 // any CSS you import will output into a single css file (app.css in this case)
 import './styles/app.css';
 
+import { createApp } from 'vue';
+import App from './vue/controllers/App.vue';
+import { router } from './vue/controllers/router/portafolio.js';
+
+const app = createApp(App);
+app.use(router);
+app.mount('#app');
+
 registerVueControllerComponents(require.context('./vue/controllers', true, /\.vue$/));
