@@ -94,8 +94,8 @@
 </template>
 
 <script setup>
-import imgAsap from "../../img/CollageAsapServices.png"
-import imgQuiz from "../../img/QuizDataScience.png"
+import imgAsap from "../../img/CollageAsapServices.png";
+import imgQuiz from "../../img/QuizDataScience.png";
 import Footer from "./Footer.vue";
 const images = [
   { jpg: 'imgAsap', webp: 'imgAsap', alt: 'Proyecto Asap Services', title: 'Asap Services' },

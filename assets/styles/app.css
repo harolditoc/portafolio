@@ -8,8 +8,13 @@ body {
   background-size: cover;
   background-attachment: fixed;
   font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-}
+}.bg-sec2 {
+      background: linear-gradient(0deg, #ffffff 50%, #0e7490 50%);
+    }
 
+    .bg-sec-proy {
+      background: linear-gradient(0deg, #ffffff 50%, #0e7490 50%);
+    }
 /* .bg-sech {
     background: linear-gradient(90deg, #b6d431 50%, transparent 50%);
   } */
@@ -121,3 +126,8 @@ transition: all 1s;
    opacity: 0;
   }
 /* Fin App Vue CSS */
+
+
+.ts {
+  background-image: url(../img/bg-computer.jpg);
+}
