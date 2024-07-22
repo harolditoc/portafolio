@@ -7,17 +7,20 @@ const routes = [
     {
         name: 'inicios',
         path: '/inicio',
-        component: Inicio
+        component: Inicio,
+        meta: { textColor: 'black' }
     },
     {
         name: 'sobreMi',
         path: '/sobreMi',
-        component: sobreMi
+        component: sobreMi,
+        meta: { textColor: 'black' }
     },
     {
         name: 'proyectos',
         path: '/proyectos',
-        component: Proyectos
+        component: Proyectos,
+        meta: { textColor: 'white' }
     }
 ];
 export const router = createRouter({

@@ -127,7 +127,92 @@ transition: all 1s;
   }
 /* Fin App Vue CSS */
 
-
+/* Projects */
 .ts {
-  background-image: url(../img/bg-computer.jpg);
+  background-image: url(../img/img-projects.jpg);
+}
+
+.overlay{
+  position: absolute;
+  z-index: 0;
+  width: 100%;
+  height: 700px;
+  top: 0;
+  left: 0;
+  background: rgba(60, 63, 114, .7);
+}
+
+.content{
+  width: 100%;
+  min-height: 800px;
+  position: relative;
+  z-index: 1;
+}
+
+.content:before{
+  content: '';
+  width: 50%;
+  height: 150px;
+  position: absolute;
+  top: -5px;
+  left: 0;
+  background-color: #FEFFFF;
+  transform: skewY(5.5deg);/*8*/
+}
+
+.content:after{
+  content: '';
+  width: 50%;
+  height: 150px;
+  position: absolute;
+  top: -5px;
+  right: 0;
+  background-color: #FEFFFF;
+  transform: skewY(-5.5deg);/*8*/
+}
+
+
+.portada
+{
+  display: inline-block;
+  overflow: hidden;
+  width: 100%;
+  height: 15em;
+  max-height: 30vmax;
+  margin: 0 0 -0.4rem;
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.portada.principal .descripcion
+{
+  font-size: 1.3rem;
+  line-height: 1.4rem; 
+}
+
+.portada .descripcion
+{
+  position: absolute;
+  padding: 8%;
+  width: 100%;
+  height: 100%;
+  font-size: 1rem;
+  line-height: 1rem;
+  top: 0%;
+  color: white;
+  background: 
+    rgba(0,50,100,0.7);
+  -webkit-transform: translateY(100%);
+  -ms-transform: translateY(100%);
+  transform: translateY(100%);
+  transition: all ease .5s;
+}
+
+.portada:hover .descripcion
+{  
+  -webkit-transform: translateY(0%);  
+  -ms-transform: translateY(0%);  
+  transform: translateY(0%);
 }

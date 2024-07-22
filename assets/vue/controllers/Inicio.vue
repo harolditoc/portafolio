@@ -31,7 +31,7 @@
               <img src="https://i.imgur.com/ly7D9VF.png" alt="">
               <p
                 class="text-gray-700 text-center md:text-right leading-loose grid place-content-center h-[350px] max-[767px]:text-white">
-                Mi pasión por la tecnología nació en mi infancia, lo que me llevó a estudiar Ingeniería Informática y de
+                Mi pasión por la tecnología nació en mi infancia, por lo que tuve como decisión estudiar Ingeniería Informática y de
                 Sistemas. Me encanta crear soluciones impactantes y me adapto rapidamente a las nuevas tecnologías, lo que
                 me ha llevado a explorar y dominar diversas áreas del desarrollo web.
               </p>

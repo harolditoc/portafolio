@@ -1,21 +1,22 @@
 <template>
     <main>
-        <div class="overflow-hidden bg-gradient-to-r from-blue-200 to-cyan-100">
+        <div class="overflow-hidden bg-white">
             <section class="ts bg-cover bg-no-repeat bg-center md:bg-white/25 text-center pt-20 sm:pt-24 md:pt-28 h-[700px] pr-5 pl-5">
-              <div class="container mx-auto md:text-left md:ml-24 max-w-[700px] md:mt-20">
-                <h1 class="text-black text-4xl md:text-6xl font-extrabold mb-8">Mis proyectos<br></h1>
-                <h2 class="text-lg md:text-xl text-black leading-relaxed">
+              <div class="container mx-auto max-w-[700px] md:mt-20">
+                <h1 class="text-white relative z-10 text-4xl md:text-6xl font-extrabold mb-8">Mis proyectos<br></h1>
+                <h2 class="text-lg md:text-xl relative z-10 text-white leading-relaxed">
                   Con un enfoque integral en el desarrollo tanto del servidor como del cliente, te presento mis proyectos. Cada uno diseñado para ofrecer soluciones completas y centradas en el usuario. 
                 </h2>
               </div>
+              <div class="overlay"></div>
             </section>
             <div class="mt-20">
-                <section>
-                  <div class="container mx-auto">
+                <section class="content">
+                  <div class="container mx-auto max-w-6xl">
                     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12 -mt-40 pr-5 pl-5 z-50">             
-                      <div v-for="proyecto in proyectos" class="bg-gray-100 p-6 border border-gray-300 shadow-md rounded-lg overflow-hidden z-10">
+                      <div v-for="proyecto in proyectos" class="bg-gray-100 border border-gray-300 shadow-md rounded-lg overflow-hidden z-10 marco portada hijo principal">
                         <img :src="proyecto.imagen" alt="Project 1" class="w-40 h-28 mx-auto my-auto block mt-5">
-                        <div class="p-4 text-center">
+                        <div class="p-4 text-center descripcion">
                           <h2 class="text-2xl font-bold text-black mb-2">{{ proyecto.titulo }}</h2>
                           <p class="text-black mb-4">{{ proyecto.descripcion }}</p>
                           <div class="flex flex-wrap gap-2 items-center mt-4">
@@ -27,6 +28,7 @@
                   </div>
                 </section>
             </div>
+            <div ref="animatedElement" @click="animateElement">Haz clic para animar</div>
             <Footer />
         </div>
     </main>
@@ -37,6 +39,18 @@ import asapServs from "../../img/asapServices.png";
 import quintaOla from "../../img/quintaola.png";
 import bgProject from "../../img/bg-projects.jpg";
 import Footer from "../controllers/Footer.vue";
+import anime from '../../../public/lib/anime.es.js'
+import { ref } from 'vue';
+const animatedElement = ref(null);
+const animateElement = () => {
+  anime({
+    targets: animatedElement.value,
+    opacity: 0, // Cambia la opacidad a 0
+    duration: 1000, // Duración de la animación en milisegundos
+    easing: 'easeInOutQuad' // Tipo de easing
+  });
+};
+
 const proyectos = [
   {
     imagen: asapServs,

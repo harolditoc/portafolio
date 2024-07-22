@@ -18,4 +18,6 @@ const app = createApp(App);
 app.use(router);
 app.mount('#app');
 
+// const anime = require('animejs');
+
 registerVueControllerComponents(require.context('./vue/controllers', true, /\.vue$/));
